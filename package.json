@@ -1,0 +1,44 @@
+{
+  "name": "Custosynergy",
+  "version": "1.0.0",
+  "description": "Website for a client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Silver",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "jquery": "^3.2.1",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.4.2",
+    "nodemailer": "^4.4.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "req-flash": "0.0.3",
+    "sequelize": "^4.13.8",
+    "then-busboy": "^2.1.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashu-S/ASAP-Locksmith.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashu-S/ASAP-Locksmith/issues"
+  },
+  "homepage": "https://github.com/ashu-S/ASAP-Locksmith#readme"
+}

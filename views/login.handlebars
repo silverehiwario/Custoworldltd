@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<title>Custo Synergy World </title>
+
+ 	<!-- Icons -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JQuery Library -->
+    <!-- :Note: Dont add JQuery Library multiple times,it will mess with login & signup pages MODAL-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- file for date picker and table data -->
+	 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.bootstrap.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.colVis.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.js"></script>
+
+    <!-- Personal CSS style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Buda:300|Nixie+One|Quicksand|Rosarivo|Rubik+Mono+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Passion+One|Poppins|Russo+One|Libre+Franklin" rel="stylesheet">
+    <!--Moment JS file-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+</head>
+
+<body>
+
+
+<!--Navigation Bar-->
+  <nav class="navbar  navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+     </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav" id="top-menu">
+          <li><a href="/">HOME</a></li>
+
+          <li><a href="#service">SERVICES</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+				<ul class="nav navbar-nav navbar-right admin-nav">
+					<!-- Login Button -->
+          <button type="submit" class="btn btn-primary" id="adminLogin" data-delay = "50" onclick="location.href = '/login'"> LOG IN <i class="fa fa-sign-in" aria-hidden="true" ></i></button>
+					<!-- User icon -->
+				</ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav> <!--End Nav-->
+<!--Webpage Body-->
+<div class="body-webpage">
+
+	<section class="section-one">
+		<div class="jumbotron main-jumbotron">
+				<div class="container header-container">
+					<h3 class="headline">Custo Synergy World Limited</h3>
+					<h4 class="tagline">Need a website, ICT Networking, Graphic Design and Printing  or Consultation ?   A one stop website for all your IT needs.</h4>
+				</div> <!--End Header container -->
+			</div> <!-- End main Jumbotron -->
+	</section> <!--End Section one -->
+
+	<section class="services-section" id="service">
+		<div class="jumbotron services-jumbotron">
+			<div class="container">
+				<h2 class="service-header">OUR SERVICES INCLUDE</h2>
+		      <!-- START THE FEATURETTES -->
+		      <hr class="featurette-divider">
+
+		      <div class="row featurette">
+		        <div class="col-md-7">
+		          <h2 class="featurette-heading">ICT Networking. <span class="text-muted"></span></h2>
+		          <p class="lead">Whatever business you're in, you need a network that helps you win. Custo Synergy world Limited(CSWL) works with you to create better customer experiences and a more collaborative workplace which leads to revenue growth and ultimate benefit.  ICT network is also a way to get information flowing smoothly and quickly in your business.</p>
+		        </div>
+		        <div class="col-md-5">
+		          <img class="featurette-image img-responsive center-block" src="images/ICT.gif" alt="ict network">
+		        </div>
+		      </div>
+
+		      <hr class="featurette-divider">
+
+		      <div class="row featurette">
+		        <div class="col-md-7 col-md-push-5">
+		          <h2 class="featurette-heading">WEB & APP Development. <span class="text-muted"></span></h2>
+		          <p class="lead">CSWL is focused on building amazing user experience(UX) and interface(UI), Responsive webpages, State of art front-end and back-end technologies that fits the needs and requirement of your business and help you understand your client base by including analytics data collection for valuable insight on how your web application is used. </p>
+		        </div>
+		        <div class="col-md-5 col-md-pull-7">
+		          <img class="featurette-image img-responsive center-block" src="images/web.png" alt= "web and app dev">
+		        </div>
+		      </div>
+
+		      <hr class="featurette-divider">
+
+		      <div class="row featurette">
+		        <div class="col-md-7">
+		          <h2 class="featurette-heading">Graphic Design & Printing. <span class="text-muted"></span></h2>
+		          <p class="lead">Is your brand outdated and in need of some new energy? Do your marketing materials lack the 'wow' factor? When it comes to marrying creativity and graphic design CSWL will take you from concept to completion. Regardless of size, scope or medium, we can deliver everything from e-books, events and business advertising publication, all kinds of print, digital publications as well as brochures, product catalogs and adding vehicle graphics to your company fleet. We deliver results for companies large and small who recognize the value of great design and intelligent distribution.</p>
+		        </div>
+		        <div class="col-md-5">
+		          <img class="featurette-image img-responsive center-block" src="images/graphic.png" alt="Graphic design">
+		        </div>
+		      </div>
+
+					<div class="button-divider">
+						<center>
+							<button type="submit" class="btn btn-default book-now" id="service-btn" data-toggle="modal" data-delay = "50" data-target="#service-modal">Request a Service</button>
+						</center>
+					</div><!--End button-divider-->
+
+		      <hr class="featurette-divider">
+		      <!-- /END THE FEATURETTES -->
+			</div> <!-- END CONTAINER -->
+		</div> <!-- END SERVICES JUMBOTRON-->
+	</section> <!-- END SERVICES SECTION -->
+
+
+  <!-- services modal -->
+  <div class="modal fade" id="service-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content custom-modal">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #000">
+                      ×</button>
+                  <h4 class="modal-title" id="services-modal-label">
+                      REQUEST A SERVICE</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row reg-body">
+                      <div class="col-md-12">
+                        <form id="clientForm" action="" method="POST" class="full-services-form">
+                          <div class="form-group">
+                            <label class="modal-label" for="inputClient">Client Name</label>
+                            <input type="text" name = "client_name" class="form-control service-form" id="client_name" placeholder="Enter Full Name">
+                          </div>
+                          <div class="form-group">
+                            <label class="modal-label" for="inputLocation">Location</label>
+                            <input type="text" name="client_location" class="form-control service-form" id="client_location" placeholder="e.g. Lagos">
+                          </div>
+                          <div class="form-group">
+                            <label class="modal-label" for="inputContact">Contact Number</label>
+                            <input type="tel" name="client_contact" class="form-control service-form" id="client_contact" placeholder="e.g. 08060258884">
+                          </div>
+                          <div class="form-group">
+                            <label class="modal-label" for="selService">Select Service (select one):</label>
+                            <select class="form-control chosen-select" id="services" name="services">
+                              <option value=""></option>
+                              <option value="ICT Networking">ICT Networking</option>
+                              <option value="Web & App Development">Web & App Development</option>
+                              <option value="Graphic Design and Printing">Graphic Design and Printing</option>
+                              <option value="Advertising">Advertising</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="modal-label" for="selSpecific">Select Service (select one):</label>
+                            <select class="form-control chosen-select" id="specific_service" name="specific_service">
+                            </select>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-10">
+                                  <button type="button" class="btn btn-default submitReq" id="submitRequest" data-dismiss="modal">
+                                      Submit</button>
+                                  <button type="button" class="btn btn-default submitReq" data-dismiss="modal">
+                                      Cancel</button>
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                  </div> <!--End Row-->
+              </div> <!--End Modal Body-->
+          </div><!--End Modal Content-->
+      </div> <!--End Modal Dialogue-->
+  </div> <!--End Modal-->
+
+	<section class="expect-section">
+		<div class="jumbotron expect-jumbotron">
+			<div class="container expect-container">
+				<!--Expect Services-->
+				<div class="expect-divider">
+					<center>
+						<h2 class="expect-header">WHAT YOU CAN EXPECT</h2>
+					</center>
+					<div class="row"> <!--Begin Row 1-->
+						<div class="col-sm-6"> <!--Begin column 1-->
+							<img class="icon" src="images/icon2.png" alt="a 24/7 sign" align='left'/>
+							<h3>24 Hour Service</h3>
+							<p>Call us anytime any day we will be there for your needs</p>
+						</div> <!-- End column 1-->
+						<div class="col-sm-6"> <!--Begin column 2-->
+							<img class="icon" src="images/icon3.png" alt="a fast delivery sign with a lightening bolt" align='left'/>
+							<h3>Fast Response Time</h3>
+							<p> We strive to solve your problem no matter how big or small it is as fast as we can. </p>
+						</div> <!-- End column 2-->
+					</div> <!-- End Row 1-->
+					<div class="row"> <!--Begin Row 2-->
+						<div class="col-sm-6"> <!-- begin row 2, col 1-->
+							<img class="icon" src="images/icon4.png" alt="a dollar sign" align='left'/>
+							<h3>Competitive Price</h3>
+							<p>
+								We might have an online special or a discount so call us today to find out about our pricing.
+							</p>
+						</div> <!-- end row 2, col 1-->
+						<div class="col-sm-6"> <!-- begin row 2, col 2 -->
+							<img class="icon" src="images/icon1.png" alt="a clipboard with a checkmark sign" align='left'/>
+							<h3>Customer Support</h3>
+							<p>
+								Our customer support is always here for you, read our testimonials to see what customers say about us.
+							</p>
+						</div> <!-- end row 2, col 2-->
+					</div> <!--End Row 2-->
+				</div> <!-- END EXPECT-DIVIDER-->
+			</div> <!-- END EXPECT CONTAINER-->
+		</div> <!-- END EXPECT JUMBOTRON -->
+	</section> <!-- END EXPECT SECTION-->
+
+	<section class="reviews-section">
+		<div class="jumbotron reviews-jumbotron">
+			<div class="container reviews-container">
+				<h2 class="reviews-header">SATISFIED CUSTOMERS</h2>
+				 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+					 <!-- Indicators -->
+			      <ol class="carousel-indicators">
+			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			        <li data-target="#myCarousel" data-slide-to="1"></li>
+			        <li data-target="#myCarousel" data-slide-to="2"></li>
+			      </ol>
+						<div class="carousel-inner" role="listbox">
+			        <div class="item active">
+			          <img class="first-slide" src="/images/transparentsquare.png" alt="First slide">
+			          <div class="container">
+			            <div class="carousel-caption">
+			              <p>I definitely recommend CSWL !!! The customer service from the very beginning was exceptional!!  Lucky, the team member who handled my graphic design and printing was amazing, CSWL will definetely handle my website.
+
+										  I have never seen someone that has patience, initiative and great customer service all at once but Lucky proved to have it all!! If you need a company for your IT needs .. choose CSWL, they are the best.!!!</p>
+										<h4>Tunde B</h4>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="item">
+			          <img class="second-slide" src="/images/transparentsquare.png" alt="Second slide">
+			          <div class="container">
+			            <div class="carousel-caption">
+			              <p>Arrived on time, quick response. Very knowledgeable and respectable Company representative . Did the job very quickly and work with me on the price. If I require any IT service in the future I would definitely go to CSWL.
+
+										Please believe you need to hire this company for your service if you need any state of art work. Thank you very much for your honest service. God bless you and your company. Great workmanship and communication</p>
+			              <h4>Anonymous</h4>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="item">
+			          <img class="third-slide" src="/images/transparentsquare.png" alt="Third slide">
+			          <div class="container">
+			            <div class="carousel-caption">
+			              <p>My website design was sleek, state of art and i more than satisfied with the final output. CSWL took my idea from a mere concept and turned it into a great product. Thank you CSWL!!!!!</p>
+			              <h4>Stella O</h4>
+			            </div>
+			          </div>
+			        </div>
+								<i class="fa fa-quote-left" aria-hidden="true"></i>
+								<i class="fa fa-quote-right" aria-hidden="true"></i>
+			      </div> <!-- END CAROUSEL INNER -->
+				 </div> <!-- END MY CAROUSEL -->
+			</div> <!-- END REVIEWS CONTAINER -->
+		</div> <!--End REVIEWS Jumbotron -->
+	</section> <!--END REVIEWS SECTION -->
+
+  <section class="carousel-section">
+    <div class="jumbotron carousel-jumbotron">
+      <div class="container">
+        <div class="carousel">
+           <div id ="thumbnail-slider">
+              <div class="inner">
+                  <ul class="dd">
+                    <li>
+                     <p id = "thumb1" ></p>
+                    </li>
+										<li>
+                      <img class="thumb" src="images/nigeria3.jpg" id = "thumb2">
+                    </li>
+                    <li>
+                       <img class="thumb" src="images/nigeria2.jpg"  id = "thumb3">
+                    </li>
+                  </ul> <!--End of carousel images -->
+              </div> <!-- End of innner class-->
+           </div> <!-- End of Thumbnail-Slider -->
+        </div> <!-- End of carousel -->
+      </div> <!-- End container -->
+    </div> <!-- End Jumbotron -->
+  </section> <!--End carousel section-->
+
+  <!-- LOGIN MODAL -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myLoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="login-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×</button>
+                    <h4 class="modal-title" id="login-title">
+                        Custo Synergy World </a></h4>
+                </div>
+                <div class="modal-body modal-body-login" id="login-body">
+                    <div class="row">
+                        <div class="col-md-8" >
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#Login" data-toggle="tab"> Administrator Login</a></li>
+                            </ul>
+                              <div class="tab-content">
+                                <div class="tab-pane active" id="Login">
+                                  <form method="POST" role="form" class="form-horizontal login-body" id="login">
+                                    <div class="form-group">
+                                      <label for="userName" class="col-sm-2 control-label loginLbl">User Name</label>
+                                      <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="user_name" placeholder="User Name" />
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="password" id="passLbl" class="col-sm-2 control-label loginLbl">Password</label>
+                                      <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-sm-2">
+                                      </div>
+                                      <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-sm" id="loginButton">Submit</button>
+                                        <a href="javascript:;">Forgot your password?</a> |
+                                        <a href="/signup">Signup</a>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div><!--End Login Modal-->
+
+
+</div> <!-- End WEBPAGE BODY -->
+
+<!--Footer-->
+<footer class="footer">
+  <p class="footer-text">
+    In need of IT services?
+    <br />
+    <i class="fa fa-phone" aria-hidden="true"></i> Call Now: 08134732559, 09055706618, 08081138106
+  </p>
+  <div class="container icon-container">
+    <i class="fa fa-map-marker" aria-hidden="true"><h5 class="address">77 Uniport Road, Choba. PH</h5></i>
+    <i class="fa fa-envelope" aria-hidden="true"><h5 class="address">custoworldltd@gmail.com</h5></i>
+  </div>
+  <div class="container-fluid second-footer-container">
+    <p class="text-muted-two">
+      Copyright &#169; Custo Synergy World Limited
+    </p>
+  </div>
+</footer>
+
+
+<script type="text/javascript" src="js/accept.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
+<script type="text/javascript" src="js/assign.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/advert.js"></script>
+
+
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+
+function runImageQuery() {
+      // Here we get the location of the root page.
+      // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+      var currentURL = window.location.origin;
+      // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+      $.ajax({ url: currentURL + "/index", method: "GET" })
+      .done(function(imageData) {
+        // Here we are logging the URL so we have access to it for troubleshooting
+
+     // Here we then log the NYTData to console, where it will show up as an object.
+        console.log(imageData);
+        // Loop through and display each of the customers
+
+
+
+
+
+        for (var i = 0; i < imageData.length; i++) {
+          // Create the HTML Well (Section) and Add the table content for each reserved table
+
+          $("#thumb1").append("<a target =_blank href="+ imageData[i].input_website + "><img src = images/upload_images/"  + imageData[i].upload_image +  "></a>");
+
+           console.log("<a href=" + imageData[i].input_website + "><img src = images/upload_images/"  + imageData[i].upload_image +  "></a>");
+         }
+          });
+    }
+    runImageQuery();
+
+    </script>

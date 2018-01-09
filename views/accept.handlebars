@@ -1,0 +1,80 @@
+<!--Navigation Bar-->
+  <nav class="navbar  navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+     </div>
+     <div class="collapse navbar-collapse" id="navbar-collapse">
+
+      <ul class="nav navbar-nav">
+         <li><a href="/admin">HOME</a></li>
+                  <!-- <li><a href="/api/accept">NEW JOBS</a></li> -->
+         <li> <a href="" class="dropdown-toggle" data-toggle="dropdown">JOBS <b class="caret"></b></a>
+
+             <ul class="dropdown-menu nav navbar-nav" style="top: 53px;background-color: #222">
+                <li ><a href="/api/accept" style="text-decoration: none;">ACCEPT JOBS</a></li>
+                <li><a href="/api/assign">UPDATE JOBS</a></li>
+                <li><a href="/api/jobs">VIEW JOBS</a></li>
+             </ul>
+         </li>
+         <li> <a href="" class="dropdown-toggle" data-toggle="dropdown">REPORTS <b class="caret"></b></a>
+             <ul class="dropdown-menu nav navbar-nav" style="top: 53px;background-color: #222">
+                <li ><a href="/api/getDate" style="text-decoration: none;">PERIODIC REPORT</a></li>
+                <li><a href="/api/getDetails">WEEKLY REPORT</a></li>
+             </ul>
+         </li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right admin-nav">
+         <button type="submit" class="btn btn-primary" id="adminLogin" data-toggle="modal" data-delay = "50" data-target="/">Log Out<i class="fa fa-key" aria-hidden="true"></i></button>
+     </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav> <!--End Nav-->
+
+<!--Webpage Body-->
+<div class="container" style="position: relative; top: 85px;">
+  <table class="table table-striped accept-table-whole">
+    <thead class="table-head-accept">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>CONTACT</th>
+        <th>SERVICES</th>
+        <th>DESCRIPTION</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="table-accept">
+      {{#each Job}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.client_name}}</td>
+        <td>{{this.client_location}}</td>
+        <td>{{this.client_contact}}</td>
+        <td>{{this.services}}</td>
+        <td>{{this.specific_service}}</td>
+        <td>
+          <form method="POST" action="/api/update">
+            <input input type="hidden" type="text" name="job_id" value={{this.id}}><br>
+            <button type="submit" class="btn btn-default accepting-btn ac-btn">Accept</button>
+          </form>
+        </td>
+        <td>
+          <form method="POST" action="/api/delete">
+            <input input type="hidden" type="text" name="job_id" value={{this.id}}><br>
+            <button type="submit" class="btn btn-danger accepting-btn">Reject</button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

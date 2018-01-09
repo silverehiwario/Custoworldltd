@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<title>Custo Synergy World </title>
+
+ 	<!-- Icons -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JQuery Library -->
+    <!-- :Note: Dont add JQuery Library multiple times,it will mess with login & signup pages MODAL-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- file for date picker and table data -->
+	 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.bootstrap.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.colVis.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.js"></script>
+
+    <!-- Personal CSS style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Buda:300|Nixie+One|Quicksand|Rosarivo|Rubik+Mono+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Passion+One|Poppins|Russo+One|Libre+Franklin" rel="stylesheet">
+    <!--Moment JS file-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+</head>
+
+<body>
+
+
+		<!--Navigation Bar-->
+<nav class="navbar  navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav" id="top-menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/#service">SERVICES</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right admin-nav">
+                <!-- Login Button -->
+                <button type="submit" class="btn btn-primary" id="adminLogin" data-delay="50" onclick="location.href = '/login'"> LOG IN <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                <!-- User icon -->
+                <!-- <i class="fa fa-user-circle " id="userIcon" data-toggle="tooltip" data-placement="bottom" aria-hidden="true" title="User Profile" ></i> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--End Nav-->
+<!--Webpage Body-->
+<div class="body-webpage">
+    <div class="jumbotron services-jumbotron">
+        <div class="container">
+            <div class="row big-row">
+                <div class="col-md-6 col-sm-12 col-xs-12" id="men1">
+                    <div class="navbar-header ">
+                        <h3 class="contact-text"> Contact Us </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form  class="form1"  method = "post"  action ="send">
+                                <div class="form-group">
+                                    <label class="modal-label" for="exampleInputName">Name</label>
+                                    <input type="name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="John Smith" name = "myname">
+                                </div>
+                                <div class="form-group">
+                                    <label class="modal-label" for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name ="email">
+                                </div>
+                                <div class="form-group ">
+                                    <label class="modal-label" for="example-tel-input">Telephone</label>
+                                    <input class="form-control" type="tel" placeholder="08081138106" id="example-tel-input" name="telephone">
+                                </div>
+                                <div class="form-group">
+                                    <label class="modal-label" for="exampleTextarea">Message</label>
+                                    <textarea class="form-control" id="exampleTextarea" rows="5"  name ="message"></textarea>
+                                </div>
+
+                                <button type="submit" id="first" class="btn btn-success">
+                                    <h5 class="contact-submit">Submit</h5></button>
+                            </form>
+
+														{{msg}}
+
+                        </div>
+                    </div>
+                </div>
+                <!-- location section-->
+                <div class="col-md-4 col-sm-12 col-xs-12" id="three">
+                    <div class="panel panel-white contact-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center contact-title">Locations</h3>
+                        </div>
+                        <div class="panel-body" id="bud">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Port Harcourt </h6>
+                                    <h6><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 08134732559 </h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Lagos  </h6>
+                                    <h6><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 09055706618 </h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Warri </h6>
+                                    <h6><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 08081138106 </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END of container-->
+    </div>
+    <!--END of Jumbotron-->
+</div>
+<!--END of web Body-->
+
+
+<!--Footer-->
+<footer class="footer">
+  <p class="footer-text">
+    In need of IT services?
+    <br />
+    <i class="fa fa-phone" aria-hidden="true"></i> Call Now: 08134732559, 09055706618, 08081138106
+  </p>
+  <div class="container icon-container">
+    <i class="fa fa-map-marker" aria-hidden="true"><h5 class="address">77 Uniport Road, Choba. PH</h5></i>
+    <i class="fa fa-envelope" aria-hidden="true"><h5 class="address">custoworldltd@gmail.com</h5></i>
+  </div>
+  <div class="container-fluid second-footer-container">
+    <p class="text-muted-two">
+      Copyright &#169; Custo Synergy World Limited
+    </p>
+  </div>
+</footer>
+
+  <script type="text/javascript" src="js/accept.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
+	<script type="text/javascript" src="js/assign.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/advert.js"></script>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$("#first").on("click", function() {
+
+
+	var Contact = {
+			myname: $("#exampleInputName1").val().trim(),
+			email: $("exampleInputEmail1").val().trim(),
+			telephone: $("example-tel-input").val().trim(),
+			message: $("exampleTextarea").val().trim(),
+		}
+
+
+$.post("/send", Contact)
+		// on success, run this callback
+		.done(function(data) {
+				// log the data we found
+				console.log(data);
+
+				 window.location.reload(data);
+        });
+				
+				alert("Message sent thank you!");
+
+
+			});
+
+		});
+			</script>

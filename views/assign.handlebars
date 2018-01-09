@@ -1,0 +1,178 @@
+<!--Navigation Bar-->
+<nav class="navbar  navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/admin">HOME</a></li>
+                <!-- <li><a href="/api/accept">NEW JOBS</a></li> -->
+                <li> <a href="" class="dropdown-toggle" data-toggle="dropdown">JOBS <b class="caret"></b></a>
+                    <ul class="dropdown-menu nav navbar-nav" style="top: 53px;background-color: #222">
+                        <li><a href="/api/accept" style="text-decoration: none;">ACCEPT JOBS</a></li>
+                        <li><a href="/api/assign">UPDATE JOBS</a></li>
+                        <li><a href="/api/jobs">VIEW JOBS</a></li>
+                    </ul>
+                </li>
+                <li> <a href="" class="dropdown-toggle" data-toggle="dropdown">REPORTS <b class="caret"></b></a>
+                    <ul class="dropdown-menu nav navbar-nav" style="top: 53px;background-color: #222">
+                        <li><a href="/api/getDate" style="text-decoration: none;">PERIODIC REPORT</a></li>
+                        <li><a href="/api/getDetails">WEEKLY REPORT</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right admin-nav">
+                <button type="submit" class="btn btn-primary" id="adminLogout" data-toggle="modal" onclick="location.href = '/logout'"> Log Out <i class="fa fa-key" aria-hidden="true"></i></button>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--End Nav-->
+<!--Webpage Body-->
+<div class="container" style="position: relative; top: 45px;">
+    {{#each Job}}
+    <div class="panel panel-default job-panel" >
+        <div class="panel-body">
+            <div class="row accept-row">
+                <div class="col-xs-6"   id = "keep">
+                    <p><strong>JOB ID:</strong> {{this.id}}</p>
+                    <p><strong>NAME:</strong> {{this.client_name}}</p>
+                    <p><strong>EMAIL:</strong> {{this.client_location}}</p>
+                    <p><strong>CONTACT:</strong> {{this.client_contact}}</p>
+                    <p><strong>SERVICE TYPE:</strong> {{this.services}}</p>
+                    <p><strong>DESCRIPTION:</strong> {{this.specific_service}}</p>
+                </div>
+                <div class="col-xs-6 assignjob-form">
+                    <input input type="hidden" type="text" name="job_id" value={{this.id}}>
+                    <br>
+                    <button type="submit" class="btn btn-success" id="firstassign" data-toggle="modal" data-delay="50" data-target="#assign-modal"> Update </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<!-- assign modal -->
+      <div class="modal fade" id="assign-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #000">
+                      ×</button>
+                  <h4 class="modal-title" id="firstassign-modal-label">
+                         UPDATE </h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row reg-body">
+                      <div class="col-md-12">
+                          <form class="full-update-form">
+                              <div class="form-group">
+                                  <label for="jobId" class="modal-label">JOB ID</label>
+                                  <input type="text" class="form-control chosen-select" id="jobId" aria-describedby="emailHelp" placeholder="1">
+                              </div>
+                              <!-- <p><strong>JOB ID:</strong> 14 </p> -->
+
+                              <div class="form-group">
+                                  <label for="checkboxStatus" class="modal-label">Status</label>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inProgress" value="inProgress"> In Progress
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="hold" value="hold"> On Hold
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="completed" value="completed"> Completed
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-10">
+                                      <form method="POST" action="/api/update2" class="button-size">
+                                          <input input type="hidden" type="text" name="job_id" value=14>
+                                          <br>
+                                          <button type="submit" class="btn btn-success" id="submitupdate">Submit</button>
+                                      </form>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  <!--End Row-->
+              </div>
+              <!--End Modal Body-->
+          </div>
+          <!--End Modal Content-->
+      </div>
+      <!--End Modal Dialogue-->
+      </div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    //  To get skillsets from the Skillsets database
+
+      // Capture the form inputs
+    $("#submitupdate").on("click", function() {
+        // Form validation
+        function validateForm() {
+            var isValid = true;
+            $('.chosen-select').each(function() {
+                if ($(this).val() === '')
+                    isValid = false;
+            });
+            $('.check-input').each(function() {
+                if ($(this).val() === "")
+                    isValid = false
+            })
+            return isValid;
+        }
+        // If all required fields are filled
+        if (validateForm() == true) {
+            // Create an object for the user's data
+
+            var UpdateData = {
+                ID: $("#jobId").val().trim(),
+                Status: $('input:radio[name="inlineRadioOptions1"]:checked').val().trim(),
+            }
+
+
+            if(UpdateData.Status === "completed"){
+
+
+              console.log(UpdateData);
+            // send an AJAX POST-request with jQuery
+            $.post("/api/update2", UpdateData)
+                // on success, run this callback
+                .done(function(data) {
+                    // log the data we found
+                    console.log(data);
+
+                  });
+                    alert("Done. Thank you!");
+                    $('.full-update-form').trigger('reset');
+                    $('#assign-modal').modal('hide');
+
+                 } else {
+
+                   $.post("/api/update2", UpdateData)
+                       // on success, run this callback
+                       .done(function(data) {
+                           // log the data we found
+                           console.log(data);
+                           alert("Done. Thank you!");
+                           $('.full-update-form').trigger('reset');
+                           $('#assign-modal').modal('hide');
+                         });
+
+                       }
+
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+        return false;
+    });
+});
+</script>

@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<title>Custo Synergy World </title>
+
+ 	<!-- Icons -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JQuery Library -->
+    <!-- :Note: Dont add JQuery Library multiple times,it will mess with login & signup pages MODAL-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- file for date picker and table data -->
+	 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.bootstrap.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.bootstrap.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.colVis.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.js"></script>
+
+    <!-- Personal CSS style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Buda:300|Nixie+One|Quicksand|Rosarivo|Rubik+Mono+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Passion+One|Poppins|Russo+One|Libre+Franklin" rel="stylesheet">
+    <!--Moment JS file-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+</head>
+
+<body>
+
+
+		<!-- Navigation Bar -->
+<div class="collapse navbar-collapse" id="navbar-collapse">
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <ul class="nav navbar-nav">
+                      <li><a href="/admin">HOME</a></li>
+                      <li><a href="#">WEEKLY REPORTS </a></li>
+                      <li ><a href="/admin/monthly" > MONTHLY REPORT</a></li>
+
+
+                  </ul>               </ul>
+                <ul class="nav navbar-nav navbar-right admin-nav">
+                    <button type="submit" class="btn btn-primary" id="adminLogout" data-toggle="modal" onclick="location.href = '/logout'"> Log Out <i class="fa fa-key" aria-hidden="true"></i></button>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--End Nav-->
+    <!--End Nav-->
+    <div class="body-webpage">
+        <div class="text-right report-form-container">
+            <div class="container form-container ">
+                <div class="form-group row">
+                    <form method="GET" action="/api/getDate" class="form-align">
+                        <label for="example-datetime-local-input" class=" col-form-label startDateLabel">Start Date</label>
+                        <input class="form-control start-date-form" type="datetime-local" value="2011-08-19T13:45:00" id="date1" name="startdate">
+                </div>
+                <div class="form-group row">
+                    <label for="example-date-input" class="col-form-label endDateLabel">End Date</label>
+                    <input class="form-control end-date-form" type="datetime-local" value="2011-08-19T13:45:00" id="date2" name="endDate" style="position: relative;left: 775px;top: -181px;width: 260px">
+                </div>
+                <button type="submit" class="btn btn-default button-report" style="position: relative;top: -228px;left: 243px">Generate Report</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-primary filterable weekly-panel">
+            <div class="panel-heading month-heading">
+                <h3 class="panel-title weekly-panel-title">Periodic Report</h3>
+            </div>
+
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="thWidth">Job Id</th>
+                        <th class="thWidth">Client Name</th>
+                        <th class="thWidth">Date</th>
+                        <th class="thWidth">Services</th>
+                        <th class="thWidth">Specific Services</th>
+                        <th class="thWidth">Client Contact</th>
+                        <th class="thWidth">Email Address</th>
+                        <th class="thWidth">Job Status</th>
+                    </tr>
+                </thead>
+								<tbody class="table-accept" id =" month">
+									{{#each Job}}
+									<tr>
+										<td>{{this.id}}</td>
+										<td>{{this.client_name}}</td>
+										<td>{{this.createdAt}}</td>
+										<td>{{this.services}}</td>
+										<td>{{this.specific_service}}</td>
+										<td>{{this.client_contact}}</td>
+										<td>{{this.client_location}}</td>
+										<td>{{this.job_status}}</td>
+									</tr>
+										{{/each}}
+									</tbody>
+              </table>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // Code for Table Buttons
+        var table = $('#example').DataTable({
+            lengthChange: false,
+            buttons: ['copy', 'excel', 'pdf', 'colvis']
+        });
+        table.buttons().container()
+            .appendTo('#example_wrapper .col-sm-6:eq(0)');
+    })
+    </script>
+
+
+    <!--Footer-->
+    <footer class="footer">
+      <p class="footer-text">
+        In need of IT services?
+        <br />
+        <i class="fa fa-phone" aria-hidden="true"></i> Call Now: 08134732559, 09055706618, 08081138106
+      </p>
+      <div class="container icon-container">
+        <i class="fa fa-map-marker" aria-hidden="true"><h5 class="address">77 Uniport Road, Choba. PH</h5></i>
+        <i class="fa fa-envelope" aria-hidden="true"><h5 class="address">custoworldltd@gmail.com</h5></i>
+      </div>
+      <div class="container-fluid second-footer-container">
+        <p class="text-muted-two">
+          Copyright &#169; Custo Synergy World Limited
+        </p>
+      </div>
+    </footer>
+
+  <script type="text/javascript" src="js/accept.js"></script>
+	<script type="text/javascript" src="js/signup.js"></script>
+	<script type="text/javascript" src="js/assign.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/adminfront.js"></script>
+
+</body>
+
+</html>
