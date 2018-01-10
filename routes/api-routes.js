@@ -237,10 +237,8 @@ app.get("/index", function(req, res) {
         auth: {
             user: 'custoworldltd@gmail.com', // generated ethereal user
             pass: 'custoworld126'  // generated ethereal password
-        },
-        tls:{
-          rejectUnauthorized:false
         }
+
     });
 
     // setup email data with unicode symbols

@@ -50,6 +50,7 @@ $(document).ready(function() {
           .done(function(data) {
             // log the data we found
             console.log(data);
+						location.reload();
           });
 
 				alert("Your request is being processed. Thank you!");
