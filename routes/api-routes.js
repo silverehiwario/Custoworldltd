@@ -231,7 +231,7 @@ app.get("/index", function(req, res) {
      var nodemailer = require("nodemailer");
 
     let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        host: 'custosynergyltd.herokuapp.com',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
@@ -245,7 +245,7 @@ app.get("/index", function(req, res) {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Custosynergy" <tf6gbmr64dgxzg4d@ethereal.email>', // sender address
+        from: '"Custosynergy" <custoworldltd@gmail.com>', // sender address
         to: 'custoworldltd@gmail.com, silverehiwario@gmail.com', // list of receivers
         subject: 'Custosynergy contact request', // Subject line
         text: 'Hello world?', // plain text body
