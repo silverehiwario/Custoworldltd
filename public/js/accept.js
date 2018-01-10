@@ -16,17 +16,17 @@ $(document).ready(function() {
 				$specifics.html(html);
 		});
 		// Capture the form inputs
-		$("#submitRequest").on("click", function(){
+		$("#submitRequest").on("click", function(event){
 			// Form validation
 			function validateForm() {
 			var isValid = true;
 			$('.service-form').each(function() {
-				if ( $(this).val() === '' )
+				if ( $(this).val() === "" )
 						isValid = false;
 			});
 			$('.chosen-select').each(function() {
 				if( $(this).val() === "")
-					isValid = false
+					isValid = false;
 			})
 			return isValid;
 		}
@@ -34,12 +34,14 @@ $(document).ready(function() {
 		if (validateForm() == true)
 		{
 			// Create an object for the user's data
+			event.preventDefault();
+
 				var userData = {
-					client_name: $("#client_name").val(),
-					client_location: $("#client_location").val(),
-					client_contact: $('#client_contact').val(),
-					services: $('#services').val(),
-					specific_service: $('#specific_service').val()
+					client_name: $("#client_name").val().trim(),
+					client_location: $("#client_location").val().trim(),
+					client_contact: $('#client_contact').val().trim(),
+					services: $('#services').val().trim(),
+					specific_service: $('#specific_service').val().trim()
 				}
 
         // send an AJAX POST-request with jQuery
