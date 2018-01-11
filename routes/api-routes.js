@@ -231,15 +231,16 @@ app.get("/index", function(req, res) {
      var nodemailer = require("nodemailer");
 
     let transporter = nodemailer.createTransport({
-      service: 'Gmail',
         host: 'smtp.gmail.com',
         //port: 465,
       //  secure: true, // true for 465, false for other ports
         auth: {
             user: 'custoworldltd@gmail.com', // generated ethereal user
             pass: 'custoworld126'  // generated ethereal password
+        },
+        tls:{
+          rejectUnauthorized:false
         }
-
     });
 
     // setup email data with unicode symbols
