@@ -231,7 +231,7 @@ app.get("/index", function(req, res) {
      var nodemailer = require("nodemailer");
 
     let transporter = nodemailer.createTransport({
-        host:'smtp.gmail.com',
+        service:'Gmail',
         port:587,
         secure:false, // true for 465, false for other ports
         auth:{
