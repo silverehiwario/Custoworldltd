@@ -1065,3 +1065,29 @@ width: 100px;
   color: #fff;
   font-size: 30px;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .tagline{
+      text-align: center;
+      font-family: 'Carter One', cursive!important;
+    	font-size: 24px!important;
+    	color: #03631F !important;
+    	text-shadow: #272622 0.0em 0.0em 0.1em;
+    }
+
+    .footer-text{
+      text-align: center;
+      position: relative;
+      top: 30px;
+      font-size: 10px;
+      font-family: 'Nixie One', cursive;
+      color: #fff;
+    }
+}
