@@ -1113,6 +1113,7 @@ width: 100px;
     }
 
     .headline{
+      text-align: center;
       font-family: 'Carter One', cursive!important;
     	font-size: 50px!important;
     	padding-top: 0px;
@@ -1154,9 +1155,9 @@ width: 100px;
 
     .service-header{
       text-align: center;
-      margin-top: 80px;
+      margin-top: 70px;
       padding-bottom: 15px;
-      font-size: 30px;
+      font-size: 35px;
       font-family: 'Candal', sans-serif;
       font-weight: bold;
     }
@@ -1164,5 +1165,44 @@ width: 100px;
     .featurette-heading{
       font-family: 'Poppins', sans-serif;
       text-align: center;
+    }
+
+    #loginModal{
+      width: 100%;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    #login-title{
+      font-family: 'Quicksand', sans-serif;
+      font-size: 20px;
+    }
+
+    #login-content{
+      border-style: solid;
+      border-color: #9d9d9d;
+      border-width: 2px;
+    }
+
+    .form-horizontal{
+      padding-top: 15px;
+    }
+
+    .loginLbl {
+        /*position: relative;*/
+        top: -2px;
+        /*padding-left: 180px;*/
+    }
+
+    /**/
+    /*Main Jumbotron*/
+    .main-jumbotron{
+      height: 500px;
+      border-bottom: 1px solid #202120;
+      background-image: url(../images/cswl.jpg);
+      background-position: 0 -205px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 }
