@@ -1074,6 +1074,8 @@ width: 100px;
         width: 100%;
     }
 
+
+
     .tagline{
       text-align: center;
       font-family: 'Carter One', cursive!important;
@@ -1082,11 +1084,85 @@ width: 100px;
     	text-shadow: #272622 0.0em 0.0em 0.1em;
     }
 
+    .footer {
+      position: absolute;
+        left: 0px;
+        top: 100%;
+        bottom: 0px;
+        height: 134px;
+        width: 100%;
+      background-color: #414c23;
+    }
+
+    .second-footer-container{
+      position: absolute;
+        top: 97%;
+      height: 90px;
+      line-height: 90px;
+      background-color: #657539;
+      width: 100%;
+    }
+
+
     .footer-text{
       text-align: center;
       top: 30px;
       font-size: 10px;
       font-family: 'Nixie One', cursive;
       color: #fff;
+    }
+
+    .headline{
+      font-family: 'Carter One', cursive!important;
+    	font-size: 50px!important;
+    	padding-top: 0px;
+    	margin-top: 0px;
+    	color: white !important;
+      margin-left: -200px;
+    	text-shadow: #4F6600 0.0em 0.0em 0.1em;
+    }
+
+    .header-container{
+      position: relative;
+        top: 38%;
+        left: 13%;
+      color: #fefffc;
+    }
+
+    .navbar{
+      height: 60px;
+
+    }
+    .navbar-collapse{
+      color: #fff !important;
+      font-size: 1.5rem;
+      margin-top: 3px;
+      font-style: normal;
+      font-family: "Karla", "Helvetica Neue", helvetica, arial, sans-serif;
+    }
+
+    .container-fluid{
+      position: relative;
+      margin-top: 3px !important;
+    }
+
+    .admin-nav{
+      position: relative;
+      left: -7.5%;
+      margin-top: -5px;
+    }
+
+    .service-header{
+      text-align: center;
+      margin-top: 80px;
+      padding-bottom: 15px;
+      font-size: 30px;
+      font-family: 'Candal', sans-serif;
+      font-weight: bold;
+    }
+
+    .featurette-heading{
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
     }
 }
