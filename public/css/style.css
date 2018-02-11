@@ -1154,7 +1154,7 @@ width: 100px;
     /**/
     /*Main Jumbotron*/
     .main-jumbotron{
-      height: 650px;
+      height: 400px;
       background-image: url(../images/cswl.jpg);
       background-position: 0 -205px;
       background-size: cover;
