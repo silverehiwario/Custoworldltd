@@ -1164,6 +1164,7 @@ width: 100px;
     }
 
     .red {
+      float: right;
       text-align: center;
       margin-bottom: 10px;
       font-size: 12px;
