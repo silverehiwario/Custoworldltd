@@ -96,7 +96,7 @@ body {
   border-bottom: 2px solid #202120;
   background-image: url(../images/cswl.jpg);
   background-position: 0 -205px;
-  background-size: auto;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
@@ -1157,7 +1157,7 @@ width: 100px;
       height: 400px;
       background-image: url(../images/cswl.jpg);
       background-position: 0 -205px;
-      background-size: auto;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
       width: 100%;
