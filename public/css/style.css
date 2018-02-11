@@ -99,6 +99,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: inherit;
   width: 100%;
 }
 
@@ -1160,6 +1161,7 @@ width: 100px;
       background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-color: inherit;
       width: 100%;
     }
 
