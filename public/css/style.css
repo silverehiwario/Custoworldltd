@@ -1137,7 +1137,7 @@ width: 100px;
 
     .service-header{
       text-align: center;
-      margin-top: 80px;
+      margin-top: 50px;
       padding-bottom: 10px;
       font-size: 35px;
       font-family: 'Candal', sans-serif;
@@ -1164,7 +1164,6 @@ width: 100px;
     }
 
     .red {
-      float: right;
       text-align: center;
       margin-bottom: 10px;
       font-size: 12px;
