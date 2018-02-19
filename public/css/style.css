@@ -24,8 +24,9 @@ body {
   width: 100%;
 }
 
-.navbar-collapse ul li  {
-    display:inline-block;
+#top-menu  {
+    display:inline;
+    padding-left: 5px;
 }
 
 .container-fluid{
