@@ -208,7 +208,7 @@ app.get("/index", function(req, res) {
 
           console.log(result);
 
-          res.json(result);
+          res.render("index.handlebars");
    });
  });
 
