@@ -164,7 +164,7 @@ module.exports = function(app) {
 
 
 
-    app.post ("/admin", function(req, res) {
+    app.post ("/api/admin", function(req, res) {
 
         var website = req.body.web;
       if (req.files){
@@ -186,7 +186,7 @@ module.exports = function(app) {
                 input_website: website,
                 })
            .then(function(result) {
-                res.render("index.handlebars");
+                res.redirect("index.handlebars");
               });
            });
      } else {
