@@ -1079,6 +1079,16 @@ width: 100px;
   font-size: 30px;
 }
 
+#carouselExampleControls{
+  padding-top: 50px;
+}
+
+.img-fluid{
+  height: 500px;
+  width: 450px;
+
+}
+
 
 
 @media only screen and (max-device-width: 768px) {
