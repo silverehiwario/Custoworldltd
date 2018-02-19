@@ -1086,6 +1086,8 @@ width: 100px;
 .img-fluid{
   height: 500px;
   width: 450px;
+  margin-left: auto;
+
 
 }
 
