@@ -24,6 +24,10 @@ body {
   width: 100%;
 }
 
+.navbar-collapse ul li  {
+    display:inline-block;
+}
+
 .container-fluid{
   position: relative;
   margin-top: 3px !important;
