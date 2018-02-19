@@ -273,6 +273,14 @@ body {
   top: 40px;
 }
 
+.reviews2-jumbotron{
+  height: 500px;
+  background-color: transparent !important;
+  background-repeat: repeat;
+  position: relative;
+  top: 40px;
+}
+
 .carousel-caption{
   color: #000000;
   font-family: 'Quicksand', sans-serif;
